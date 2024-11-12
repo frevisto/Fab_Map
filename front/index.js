@@ -8,21 +8,24 @@ var map = L.map('map').setView([-14.2350, -51.9253], 4); // Centrado no Brasil
         map.on('click', function (e) {
             var lat = e.latlng.lat;
             var lon = e.latlng.lng;
+            const url = 'http://localhost:3000/api/obterEstado';
+
             // Enviar essas coordenadas para o backend para consultar qual estado
-              console.log(lat,lon);
-            fetch('/api/obterEstado', {
+              console.log("Lat:",lat,"/ Lon:",lon);
+
+            fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ lat, lon })
+            body: JSON.stringify({ lon, lat })
         })
-            .then(response => {
+            .then(async response => {
         if (!response.ok) {
+            // CAINDO AQUI, erro de CORS;
             // Se o status da resposta não for 2xx, levanta um erro
-            return response.json().then(data => {
-                throw new Error(data.error || 'Erro desconhecido');
-            });
+            const data = await response.json();
+            throw new Error(data.error || 'Erro desconhecido');
         }
         return response.json(); // Converte a resposta para JSON se for bem-sucedida
     })
