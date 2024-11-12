@@ -6,7 +6,6 @@ class Srvr {
 
     public async getEstado(req: Request, res: Response): Promise<any> {
         const { lat, lon } = req.body;
-        console.log("Lat:",lat,"/ Lon:",lon);
         try {
             const result = await pool.query(
                 `SELECT nm_uf
