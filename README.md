@@ -19,21 +19,21 @@ Passos para a Instalação
 2-) Instale as dependências do server  './server/' > npm i 
 
 3-) Crie o banco de dados com o nome sugerido.\ 
-Caso use outro nome, altere o arquivo './server/bd/index.ts' à sua escolha ou necessidade.\
+Caso use outro nome, altere o arquivo './server/bd/index.ts' à sua escolha ou necessidade.
 
 4-) Importe o arquivo './db/BR_UF_2022.shp'\
 Existem algumas formas de realizar a importação e estas variam de acordo com o sistema operacional da máquina.\
 Para usuários de distribuições Linux, indico o uso do programa ogr2ogr, ferramenta da Biblioteca de Abstração de Dados Geospaciais (GDAL),
 através da linha: '~/db $ ogr2ogr -f "PostgreSQL" PG:"host=localhost dbname=seu_banco user=seu_usuario password=sua_senha" BR_UF_2022.shp -nln estados -append'.\
 (Detalhes na seção Adendos).\
-Para usuários do sistema Windows, indica-se utilizar o PostGIS Bundle, instalável através do Stack Builder.\
+Para usuários do sistema Windows, indica-se utilizar o PostGIS Bundle, instalável através do Stack Builder.
 
 5-) Em './server' > npm start \
-A porta padrão neste projeto para o backend é a 3000, conforme './server/src/index.ts'; Altere à escolha ou necessidade.\
+A porta padrão neste projeto para o backend é a 3000, conforme './server/src/index.ts'; Altere à escolha ou necessidade.
 
 6-) Sirva o front através do Live Server.\
 A porta padrão para o frontend neste projeto é a 5500.\
-Certifique-se que o endereço na barra de pesquisa não seja seu IP, mas sim 'http://localhost:5500/'.\
+Certifique-se que o endereço na barra de pesquisa não seja seu IP, mas sim 'http://localhost:5500/'.
 
 Nesse ponto, a aplicação deve estar funcional.
 ----------------------------------------------
