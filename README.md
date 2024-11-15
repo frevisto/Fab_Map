@@ -18,8 +18,9 @@ Passos para a Instalação
 
 2-) Instale as dependências do server  './server/' > npm i 
 
-3-) Crie o banco de dados com o nome sugerido.\ 
-Caso use outro nome, altere o arquivo './server/bd/index.ts' à sua escolha ou necessidade.
+3-) Crie o banco de dados com o nome sugerido, ou outro, e rode a query "create extension postgis"\
+Rode a query "select postgis_version()", o retorno positivo confirma a instalação.\
+Caso use outro nome no banco, não se esqueça de alterar o arquivo './server/bd/index.ts'. Este é a configuração do pool.
 
 4-) Importe o arquivo './db/BR_UF_2022.shp'\
 Existem algumas formas de realizar a importação e estas variam de acordo com o sistema operacional da máquina.\
