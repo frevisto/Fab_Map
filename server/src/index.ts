@@ -34,7 +34,7 @@ app.use(express.json());
 
 app.post('/api/obterEstado', Srvr.getEstado);
 
-// app.post('/api/obterDistancia', Srvr.getDistancia)
+app.post('/api/obterCongresso', Srvr.getCongresso)
 
 const PORT = 3000;
 app.listen(PORT, () => {

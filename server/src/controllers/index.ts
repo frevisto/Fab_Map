@@ -28,7 +28,7 @@ class Srvr {
         }
     }
 
-    public async getDistancia(req: Request, res: Response): Promise<any> {
+    public async getCongresso(req: Request, res: Response): Promise<any> {
         const { lat, lon } = req.body;
 
         const fixedLat = -15.799727917206335;

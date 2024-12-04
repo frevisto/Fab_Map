@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.5" />
-    <title>getEstado</title>
+    <title>getCongresso</title>
     <link rel="icon" href="../assets/mapa.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -14,14 +14,13 @@
     <style>
       body {
         display: flex;
-        background-color: rgba(60, 100, 70, 0.5);
+        background-color: rgba(120, 200, 40, 0.5);
       }
       p {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: medium;
         color: black;
       }
-
       button {
         margin: 10px 50px;
         background-color: rgba(63, 95, 66, 0.3);
@@ -36,16 +35,15 @@
       }
 
       button:hover {
-        background-color: rgba(33, 101, 92, 0.5);
+        background-color: rgba(30, 100, 100, 0.5);
       }
       #asd {
-        max-width: 200px;
+        max-width: 190px;
       }
       #clicked-points {
-        max-width: 185px;
         margin-top: 10px;
+        max-width: 190px;
         padding: 0;
-        border-radius: 5px;
         list-style-type: none;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: small;
@@ -53,7 +51,7 @@
       }
 
       #clicked-points li {
-        margin: 4px 0;
+        margin: 5px 0;
         padding: 5px;
         background-color: rgba(200, 200, 200, 0.5);
         border-radius: 4px;
@@ -62,11 +60,16 @@
   </head>
   <body>
     <div id="asd">
-      <h2>getEstado</h2>
-      <p>Clique em qualquer estado brasileiro.</p>
+      <h2>getCongresso</h2>
+      <p>
+        Clique em qualquer estado brasileiro.<br /><b
+          >Recarregue para limpar.</b
+        >
+      </p>
       <button><a href="../index.html">Voltar</a></button>
       <ul id="clicked-points"></ul>
     </div>
+
     <div id="map" style="height: 99vh; width: 99vw; border-radius: 10px"></div>
 
     <script
@@ -75,6 +78,6 @@
       crossorigin=""
     ></script>
 
-    <script defer src="../scripts/getEstado.js"></script>
+    <script defer src="../scripts/getCongresso.js"></script>
   </body>
 </html>

@@ -42,6 +42,10 @@ map.on('click', function (e) {
                 .setContent(data.estado)
                 .openOn(map);
                 
+                const list = document.getElementById('clicked-points');
+                const listItem = document.createElement('li');
+                listItem.textContent = `${data.estado}`;
+                list.appendChild(listItem);
 
                 } else {
                 console.error('Resposta inválida:', data);
